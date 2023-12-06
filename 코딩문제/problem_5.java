@@ -7,16 +7,14 @@ import java.util.Scanner;
 public class problem_5 {
     public static void main(String[] args) { //메인메서드
         Scanner scanner = new Scanner(System.in); //사용자 입력값
-        String str = scanner.nextLine(); //str 문자열 생성
-        String arr[] = null; //arr 문자열 배열 생성
-        arr = str.split(" "); //split()을 사용하여 문자열을 배열로 만들어줌, split(“  “)을 하여 문자열을 “ “ 기준으로 나누어 단어로 배열에 저장이된다
 
-        for(String sort : arr) //
-            if( sort.startsWith("-") )
-                System.out.print(sort + " ");
-        for(String sort : arr)
-            if( !sort.startsWith("-") )
-        System.out.print(sort + " ");
+        System.out.println("n개의 정수를 가진 배열을 입력하시오: ");
+        String strSort = scanner.nextLine(); //strSort 문자열 생성
+
+        String[] arr = strSort.split(" "); //split()을 사용하여 문자열을 배열로 만들어줌, split(“  “)을 하여 문자열을 “ “ 기준으로 나누어 단어로 배열에 저장이된다
+
+        for(String sort : arr) if( sort.startsWith("-") ) System.out.print(sort + " ");
+        for(String sort : arr) if( !sort.startsWith("-") ) System.out.print(sort + " ");
     }
 
 
